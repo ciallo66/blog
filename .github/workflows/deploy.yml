@@ -2,28 +2,41 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main   # 当推送到 main 分支时触发（可根据你的默认分支修改）
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6  # 升级到 v6
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6  # 升级到 v6
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
         with:
-          node-version: 24  # 使用最新的 Node.js 24
+          node-version: 18
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install dependencies 📦
+        run: npm ci
 
-      - name: Build
+      - name: Build 🔧
         run: npm run build
+        env:
+          # 如果仓库名不是 username.github.io，需要设置 publicPath
+          # 你也可以在 vue.config.js 中硬编码，这里作为环境变量示例
+          VUE_APP_PUBLIC_PATH: /${{ github.event.repository.name }}/
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          # 如果希望部署到 gh-pages 分支（默认），保持下面两行注释
+          # publish_branch: gh-pages
+          # destination_dir: ./
