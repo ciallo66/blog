@@ -14,9 +14,9 @@ export default {
   data() {
     return {
       posts: [
-        { id: 1, title: 'Vue 2 入门指南', date: '2025-01-10', content: '详细内容：Vue 2 是一个渐进式框架……' },
-        { id: 2, title: 'CSS Grid 布局实战', date: '2025-01-15', content: 'Grid 布局可以轻松实现二维布局……' },
-        { id: 3, title: '前端性能优化技巧', date: '2025-01-20', content: '1. 压缩图片 2. 代码分割……' }
+        { id: 1, title: 'Vue 2 入门指南', date: '2025-01-10', 
+        content: 'vue2的学习是很艰难的！  ' },
+        
       ]
     }
   },

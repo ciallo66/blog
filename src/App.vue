@@ -4,6 +4,7 @@
     <main>
       <router-view />
     </main>
+    <br><br><br><br><br>
     <Footer />
   </div>
 </template>

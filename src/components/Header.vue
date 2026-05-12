@@ -1,12 +1,12 @@
 <template>
   <header class="site-header">
     <div class="logo">
-      <router-link to="/">My Blog</router-link>
+      <router-link to="/">博客</router-link>
     </div>
     <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/blog">Blog</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/">主页</router-link>
+      <router-link to="/blog">内容</router-link>
+      <router-link to="/about">关于</router-link>
     </nav>
   </header>
 </template>

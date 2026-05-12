@@ -7,16 +7,16 @@ import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/blog', name: 'BlogList', component: BlogList },
-  { path: '/blog/:id', name: 'BlogPost', component: BlogPost, props: true },
-  { path: '/about', name: 'About', component: About }
-]
+
 
 const router = new VueRouter({
-  mode: 'history',   // 使用 history 模式，URL 更美观
-  routes
+  mode: 'hash',
+  routes:[
+    { path: '/', name: 'Home', component: Home },
+    { path: '/blog', name: 'BlogList', component: BlogList },
+    { path: '/blog/:id', name: 'BlogPost', component: BlogPost, props: true },
+    { path: '/about', name: 'About', component: About }
+  ]
 })
 
 export default router

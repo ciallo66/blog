@@ -19,9 +19,7 @@ export default {
   data() {
     return {
       posts: [
-        { id: 1, title: 'Vue 2 入门指南', summary: '学习 Vue 2 的核心概念和用法。', date: '2025-01-10' },
-        { id: 2, title: 'CSS Grid 布局实战', summary: '使用 CSS Grid 构建响应式布局。', date: '2025-01-15' },
-        { id: 3, title: '前端性能优化技巧', summary: '提升网站性能的 10 个实用技巧。', date: '2025-01-20' }
+        { id: 1, title: 'Vue2的学习', summary: '学习和巩固Vue2的各项技能', date: '2025-05-12' },
       ]
     }
   }
