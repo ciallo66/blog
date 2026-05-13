@@ -1,42 +1,43 @@
-name: Deploy to GitHub Pages
+yaml
+name: 自动部署
 
 on:
   push:
-    branches:
-      - main   # 当推送到 main 分支时触发（可根据你的默认分支修改）
+    branches: [ main ]   # 你的主分支名
+
+# 给 GITHUB_TOKEN 写权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
 
     steps:
-      - name: Checkout 🛎️
+      - name: 检出代码
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️
+      - name: 设置 Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies 📦
-        run: npm ci
+      - name: 安装依赖
+        run: npm install
 
-      - name: Build 🔧
+      - name: 构建
         run: npm run build
-        env:
-          # 如果仓库名不是 username.github.io，需要设置 publicPath
-          # 你也可以在 vue.config.js 中硬编码，这里作为环境变量示例
-          VUE_APP_PUBLIC_PATH: /${{ github.event.repository.name }}/
 
-      - name: Deploy to GitHub Pages 🚀
-        uses: peaceiris/actions-gh-pages@v4
+      - name: 上传 Pages 产物
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          # 如果希望部署到 gh-pages 分支（默认），保持下面两行注释
-          # publish_branch: gh-pages
-          # destination_dir: ./
+          path: ./dist   # 默认输出目录
+
+      - name: 部署到 Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
