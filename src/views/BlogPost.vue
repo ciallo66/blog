@@ -26,7 +26,7 @@ export default {
   methods: {
     async loadMd(fileName) {
       try {
-        const url = `/blog/${fileName}`;
+        const url = `${process.env.BASE_URL}blog/${fileName}`;
         const res = await fetch(url);
         if (!res.ok) {
           throw new Error(`加载失败，状态码：${res.status}`);
