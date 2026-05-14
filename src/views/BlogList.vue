@@ -3,9 +3,12 @@
     <h2>所有文章</h2>
     <div class="posts">
       <article v-for="post in posts" :key="post.id" class="post-card">
+
+        
         <h3>
           <router-link :to="`/blog/${post.id}`">{{ post.title }}</router-link>
         </h3>
+
         <p>{{ post.summary }}</p>
         <small>{{ post.date }}</small>
       </article>
@@ -20,6 +23,8 @@ export default {
     return {
       posts: [
         { id: 1, title: 'Vue2的学习', summary: '学习和巩固Vue2的各项技能', date: '2025-05-12' },
+        { id: 2, title: 'md的学习', summary: 'md知识点总结', date: '2025-05-14' },
+        
       ]
     }
   }

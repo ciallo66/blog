@@ -9,12 +9,18 @@
 </template>
 
 <script>
+    
     export default {
-        name:'Vue2'
+        name:'Vue2',
+        data(){
+            return{
+                
+            }
+        },
     }
 </script>
 
-<style scoped>
+<style>
     .aaa{
         width:50vw;
         margin: auto;

@@ -1,44 +1,52 @@
 <template>
-  <div class="blog-post">
-    <h2>{{ post.title }}</h2>
-    <p class="date">{{ post.date }}</p>
-    <div class="content">{{ post.content }}</div>
-    <router-link to="/blog">&larr; 返回文章列表</router-link>
+  <div class="aaa markdown-body" >
+    <!-- 渲染 Markdown 后的 HTML -->
+    <div v-html="renderedHtml"></div>
+    nihao1
+
   </div>
 </template>
 
 <script>
+import { marked } from 'marked';
+import 'github-markdown-css/github-markdown.css';
+
 export default {
   name: 'BlogPost',
-  props: ['id'],
   data() {
     return {
-      posts: [
-        { id: 1, title: 'Vue 2 入门指南', date: '2025-01-10', 
-        content: 'vue2的学习是很艰难的！  ' },
-        
-      ]
-    }
+      markdownSource: ''
+    };
   },
   computed: {
-    post() {
-      return this.posts.find(p => p.id === Number(this.id)) || { title: 'Not Found', content: '文章不存在' }
+    renderedHtml() {
+      return this.markdownSource ? marked.parse(this.markdownSource) : '';
     }
+  },
+  methods: {
+    async loadMd(fileName) {
+      try {
+        const url = `/blog/${fileName}`;
+        const res = await fetch(url);
+        if (!res.ok) {
+          throw new Error(`加载失败，状态码：${res.status}`);
+        }
+        this.markdownSource = await res.text();
+      } catch (error) {
+        console.error(error);
+        this.markdownSource = '# 加载失败\n请检查文件路径或网络连接。';
+      }
+    }
+  },
+  mounted() {
+    // 最简单的方式：直接加载 nihao.md
+    this.loadMd('nihao.md');
   }
-}
+};
 </script>
-
-<style scoped>
-.blog-post {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-.date {
-  color: #888;
-}
-.content {
-  margin: 2rem 0;
-  line-height: 1.8;
-}
+<style>
+  .aaa{
+    margin: auto;
+    width: 50vw;
+  }
 </style>
