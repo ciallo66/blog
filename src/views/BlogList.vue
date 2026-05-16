@@ -23,6 +23,7 @@ export default {
       posts: [
         { id: 1, title: 'Vue2的学习', summary: 'Vue2基础知识总结', date: '2025-05-12' },
         { id: 2, title: 'md的学习', summary: 'md知识点总结', date: '2025-05-14' },
+        { id: 3, title: 'Vue3的学习', summary: 'vue3的新内容', date: '2025-05-16' },
       ]
     }
   },
