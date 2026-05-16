@@ -29,10 +29,12 @@ const router = new VueRouter({
       path: '/about', 
       component: About 
     },
-
-    { 
-      path: '/blog/1',
-      component:BlogPost}
+    {
+      path: '/blog/:id',
+      name: 'BlogPost',
+      component: BlogPost
+    }
+    
   ]
 })
 
