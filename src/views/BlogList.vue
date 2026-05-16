@@ -28,8 +28,6 @@ export default {
   },
   mounted(){
     this.$bus.$emit('moveid', this.posts)
-
-    
   }
 }
 </script>
