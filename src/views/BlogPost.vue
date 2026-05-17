@@ -36,14 +36,6 @@ export default {
       }
     }
   },
-  // 方案一：组件创建时立即加载（适合非复用场景）
-  created() {
-    const { id } = this.$route.params
-    if (id) {
-      // 假设 md 文件以 id + '.md' 命名
-      this.loadMd(`${id}.md`)
-    }
-  },
   // 方案二：如果路由重用（比如从 /blog/1 到 /blog/2），需要监听 $route 变化
   watch: {
     '$route.params.id': {
@@ -61,6 +53,6 @@ export default {
 <style>
 .aaa {
   margin: auto;
-  width: 50vw;
+  width: 60vw;
 }
 </style>
