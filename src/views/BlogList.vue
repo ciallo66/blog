@@ -16,6 +16,24 @@
 </template>
 
 <script>
+
+console.log('1. 同步开始');
+
+async function example() {
+  console.log('2. async 函数内部（await 之前）');
+
+  // 模拟一个异步请求：立即成功的 Promise
+  const data = await Promise.resolve('数据回来了');
+
+  console.log('4. await 之后，拿到数据:', data);
+  return data;
+}
+
+example().then((res) => {
+  console.log('5. then 回调，返回结果:', res);
+});
+
+console.log('3. 同步结束');
 export default {
   name: 'BlogList',
   data() {
