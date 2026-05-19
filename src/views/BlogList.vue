@@ -45,6 +45,8 @@ export default {
         { id: 4, title: '每天两个算法题', summary: '算法学习', date: '2025-05-16' },
         { id: 5, title: '异步学习', summary: 'promise和async/await语法糖', date: '2025-05-17' },
         { id: 6, title: 'ts学习', summary: '记录ts的部分语法', date: '2025-05-18' },
+        { id: 7, title: 'MySql', summary: 'MySql数据库的学习', date: '2025-05-19' },
+        { id: 8, title: 'Pinia', summary: 'Pinia的学习', date: '2025-05-19' },
       ]
     }
   },
