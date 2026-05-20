@@ -22,3 +22,40 @@ export default {
     }
   },
 
+  methods: {
+    async loadMd(fileName) {
+      try {
+        const url = `${process.env.BASE_URL}blog/${fileName}`
+        const res = await fetch(url)
+        if (!res.ok) {
+          throw new Error(`加载失败，状态码：${res.status}`)
+        }
+        this.markdownSource = await res.text()
+      } catch (error) {
+        console.error(error)
+        this.markdownSource = '# 加载失败\n请检查文件路径或网络连接。'
+      }
+    }
+  },
+  // 方案二：如果路由重用（比如从 /blog/1 到 /blog/2），需要监听 $route 变化
+  watch: {
+    '$route.params.id': {
+      handler(newId) {
+        if (newId) {
+          this.loadMd(`${newId}.md`)
+        }
+      },
+      immediate: true // 立即执行一次，相当于 created
+    }
+  }
+}
+console.log('点不了绿点我该如何是好');
+
+</script>
+
+<style>
+.aaa {
+  margin: auto;
+  width: 60vw;
+}
+</style>
