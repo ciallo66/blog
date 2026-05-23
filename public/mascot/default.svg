@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" role="img" aria-label="`M">
+  <defs>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffb3c6"/>
+      <stop offset="100%" style="stop-color:#ff8fab"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c4b5fd"/>
+      <stop offset="100%" style="stop-color:#89c9f5"/>
+    </linearGradient>
+  </defs>
+  <!-- Ñ -->
+  <ellipse cx="100" cy="95" rx="72" ry="68" fill="url(#hair)"/>
+  <!-- 8 -->
+  <ellipse cx="100" cy="88" rx="52" ry="48" fill="#ffe8d6"/>
+  <!-- w -->
+  <path d="M48 78 Q100 30 152 78 Q130 95 100 88 Q70 95 48 78" fill="url(#hair)"/>
+  <!-- < -->
+  <ellipse cx="82" cy="88" rx="8" ry="10" fill="#5c5470"/>
+  <ellipse cx="118" cy="88" rx="8" ry="10" fill="#5c5470"/>
+  <circle cx="85" cy="85" r="3" fill="#fff"/>
+  <circle cx="121" cy="85" r="3" fill="#fff"/>
+  <!-- n¢ -->
+  <ellipse cx="68" cy="98" rx="10" ry="6" fill="#ffb3c6" opacity="0.6"/>
+  <ellipse cx="132" cy="98" rx="10" ry="6" fill="#ffb3c6" opacity="0.6"/>
+  <!-- 4 -->
+  <path d="M92 102 Q100 108 108 102" stroke="#e8a0a8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- «S -->
+  <path d="M55 135 Q100 125 145 135 L155 240 Q100 255 45 240 Z" fill="url(#dress)"/>
+  <!-- tvÓ -->
+  <circle cx="100" cy="132" r="12" fill="#ff8fab"/>
+  <path d="M88 128 L72 118 L88 132 Z M112 128 L128 118 L112 132 Z" fill="#ff6b95"/>
+  <!-- –P -->
+  <ellipse cx="58" cy="165" rx="18" ry="22" fill="#ffe8d6"/>
+  <ellipse cx="142" cy="165" rx="18" ry="22" fill="#ffe8d6"/>
+</svg>

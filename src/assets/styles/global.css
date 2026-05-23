@@ -1,14 +1,405 @@
-/* 基础重置 + 字体 */
-* {
+/* ═══ 日间主题（默认） ═══ */
+:root,
+[data-theme='light'] {
+  --color-primary: #ff8fab;
+  --color-primary-dark: #ff6b95;
+  --color-secondary: #89c9f5;
+  --color-accent: #c4b5fd;
+  --color-mint: #9ee8d9;
+  --color-yellow: #ffe08a;
+
+  --color-text: #5c5470;
+  --color-text-light: #8b8399;
+  --color-heading: #7b6d9a;
+
+  --color-card: rgba(255, 255, 255, 0.88);
+  --color-card-border: rgba(255, 143, 171, 0.35);
+  --color-shadow: rgba(255, 143, 171, 0.25);
+  --color-shadow-hover: rgba(196, 181, 253, 0.45);
+
+  --color-header-bg: rgba(255, 255, 255, 0.75);
+  --color-footer-bg: rgba(255, 255, 255, 0.6);
+  --color-body-bg: linear-gradient(160deg, #fff5f9 0%, #f3f0ff 35%, #e8f7ff 70%, #fff9ee 100%);
+
+  --color-blob-1: #ffc8dd;
+  --color-blob-2: #bde0fe;
+  --color-blob-3: #e2d4f7;
+  --color-deco-star: var(--color-primary);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --font-display: 'ZCOOL KuaiLe', 'Nunito', sans-serif;
+  --font-body: 'Nunito', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+
+  --transition-bounce: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: 0.3s ease;
+}
+
+/* ═══ 夜间星空主题 ═══ */
+[data-theme='dark'] {
+  --color-primary: #a8b4ff;
+  --color-primary-dark: #c4ceff;
+  --color-secondary: #7eb8da;
+  --color-accent: #9b8ec4;
+  --color-mint: #6bb8a8;
+  --color-yellow: #d4c48a;
+
+  --color-text: #c8c4d4;
+  --color-text-light: #9490a8;
+  --color-heading: #e2dff0;
+
+  --color-card: rgba(30, 32, 52, 0.82);
+  --color-card-border: rgba(140, 150, 200, 0.22);
+  --color-shadow: rgba(0, 0, 0, 0.35);
+  --color-shadow-hover: rgba(100, 120, 200, 0.25);
+
+  --color-header-bg: rgba(22, 24, 42, 0.85);
+  --color-footer-bg: rgba(22, 24, 42, 0.75);
+  --color-body-bg: radial-gradient(ellipse 120% 80% at 50% 0%, #1e2240 0%, #141628 45%, #0d0f18 100%);
+
+  --color-blob-1: #2a2850;
+  --color-blob-2: #1e2848;
+  --color-blob-3: #252040;
+  --color-deco-star: rgba(200, 210, 255, 0.35);
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  background: #f8f9fa;
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-body-bg);
+  background-attachment: fixed;
+  min-height: 100vh;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background 0.6s ease,
+    color 0.4s ease;
+}
+
 a {
-  color: #3498db;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* ═══ 通用萌系组件类 ═══ */
+.page-wrap {
+  width: min(920px, 92vw);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  animation: fadeSlideUp 0.55s ease both;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, 2.4rem);
+  color: var(--color-heading);
+  text-align: center;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.05em;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.kawaii-card {
+  background: var(--color-card);
+  backdrop-filter: blur(12px);
+  border: 2px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 32px var(--color-shadow);
+  transition:
+    transform var(--transition-bounce),
+    box-shadow var(--transition-smooth),
+    border-color var(--transition-smooth),
+    background 0.4s ease;
+}
+
+.kawaii-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 40px var(--color-shadow-hover);
+  border-color: rgba(196, 181, 253, 0.6);
+}
+
+[data-theme='dark'] .kawaii-card:hover {
+  border-color: rgba(140, 150, 200, 0.45);
+}
+
+.btn-kawaii {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border: none;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 20px var(--color-shadow);
+  cursor: pointer;
+  transition:
+    transform var(--transition-bounce),
+    box-shadow var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-kawaii:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 28px var(--color-shadow-hover);
+  color: #fff;
+}
+
+.btn-kawaii:active {
+  transform: scale(0.97);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: linear-gradient(135deg, #ffe8f0, #f0e8ff);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-card-border);
+}
+
+[data-theme='dark'] .badge {
+  background: linear-gradient(135deg, #2a2848, #1e2840);
+}
+
+/* ═══ 动画 ═══ */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes skyTwinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* ═══ 背景装饰层 ═══ */
+.bg-deco {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-deco__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.45;
+  transition: background 0.6s ease, opacity 0.6s ease;
+}
+
+.bg-deco__blob--1 {
+  width: 320px;
+  height: 320px;
+  background: var(--color-blob-1);
+  top: -80px;
+  right: -60px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.bg-deco__blob--2 {
+  width: 280px;
+  height: 280px;
+  background: var(--color-blob-2);
+  bottom: 10%;
+  left: -80px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.bg-deco__blob--3 {
+  width: 200px;
+  height: 200px;
+  background: var(--color-blob-3);
+  top: 40%;
+  right: 15%;
+  animation: float 7s ease-in-out infinite 1s;
+}
+
+[data-theme='dark'] .bg-deco__blob {
+  opacity: 0.35;
+}
+
+/* 日间：emoji 装饰星（用语义化 class，不是数字 class 名） */
+.bg-deco__emoji-star {
+  position: absolute;
+  font-size: 1.2rem;
+  color: var(--color-deco-star);
+  opacity: 0.45;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.bg-deco__emoji-star--a {
+  top: 12%;
+  left: 8%;
+  animation-delay: 0s;
+}
+.bg-deco__emoji-star--b {
+  top: 25%;
+  right: 12%;
+  animation-delay: 0.8s;
+  font-size: 1.5rem;
+}
+.bg-deco__emoji-star--c {
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 1.5s;
+}
+.bg-deco__emoji-star--d {
+  bottom: 18%;
+  right: 20%;
+  animation-delay: 0.4s;
+  font-size: 0.9rem;
+}
+.bg-deco__emoji-star--e {
+  top: 55%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+[data-theme='dark'] .bg-deco__emoji-star {
+  display: none;
+}
+
+/* 夜间：流星雨（纯 CSS，无需额外库） */
+.bg-deco__meteors {
+  display: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .bg-deco__meteors {
+  display: block;
+}
+
+.bg-deco__meteor {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(220, 230, 255, 0.7), transparent);
+  opacity: 0;
+  transform: rotate(-38deg);
+  filter: blur(0.3px);
+}
+
+.bg-deco__meteor--1 {
+  top: 8%;
+  left: -10%;
+  animation: meteorShoot 18s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.bg-deco__meteor--2 {
+  top: 28%;
+  left: -15%;
+  width: 70px;
+  animation: meteorShoot 22s ease-in-out infinite;
+  animation-delay: 11s;
+}
+
+.bg-deco__meteor--3 {
+  top: 52%;
+  left: -8%;
+  width: 85px;
+  animation: meteorShoot 20s ease-in-out infinite;
+  animation-delay: 16s;
+}
+
+@keyframes meteorShoot {
+  0%,
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(-38deg);
+  }
+  90% {
+    opacity: 0.55;
+  }
+  96% {
+    opacity: 0;
+    transform: translate(55vw, 32vh) rotate(-38deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
