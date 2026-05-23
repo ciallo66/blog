@@ -23,6 +23,6 @@ export const mascotConfig = {
     '可疑的人，我会盯紧哦。',
   ],
   /** 右下角距边缘（px） */
-  offsetRight: 12,
-  offsetBottom: 8,
+  offsetRight: 50,
+  offsetBottom: 150,
 }
