@@ -1,41 +1,23 @@
-/* 文章页 Markdown 萌系覆盖 */
+/* ══════════════════════════════════════════ */
+/* 文章页 Markdown 基础全局样式（白夜共用框架）  */
+/* ══════════════════════════════════════════ */
 .markdown-kawaii {
   padding: 2rem 2.25rem;
   border-radius: var(--radius-lg);
-}
-
-.markdown-kawaii.markdown-body {
-  background: var(--color-card);
-  color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.75;
 }
 
 .markdown-kawaii h1,
 .markdown-kawaii h2,
 .markdown-kawaii h3 {
   font-family: var(--font-display);
-  color: var(--color-heading);
   border-bottom: 2px dashed rgba(255, 143, 171, 0.35);
   padding-bottom: 0.35em;
 }
 
-.markdown-kawaii h1 {
-  font-size: 1.85rem;
-}
+.markdown-kawaii h1 { font-size: 1.85rem; }
 
 .markdown-kawaii a {
-  color: var(--color-primary-dark);
   text-decoration: underline wavy var(--color-secondary);
-}
-
-.markdown-kawaii code {
-  background: linear-gradient(135deg, #fff0f5, #f0f4ff);
-  color: var(--color-primary-dark);
-  padding: 0.15em 0.45em;
-  border-radius: 8px;
-  font-size: 0.9em;
 }
 
 .markdown-kawaii pre {
@@ -50,72 +32,93 @@
   color: #ffe8f0;
 }
 
-.markdown-kawaii blockquote {
-  border-left: 4px solid var(--color-primary);
-  background: linear-gradient(90deg, #fff5f9, transparent);
-  color: var(--color-text-light);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-}
-
-.markdown-kawaii table th {
-  background: linear-gradient(135deg, #ffe8f0, #e8f0ff);
-}
-
-.markdown-kawaii table tr:nth-child(2n) {
-  background: rgba(255, 245, 249, 0.6);
-}
-
-.markdown-kawaii hr {
-  border: none;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-accent), transparent);
-  border-radius: var(--radius-pill);
-}
-
-[data-theme='dark'] .markdown-kawaii h1,
-[data-theme='dark'] .markdown-kawaii h2,
-[data-theme='dark'] .markdown-kawaii h3 {
-  border-bottom-color: rgba(140, 150, 200, 0.25);
-}
-
-[data-theme='dark'] .markdown-kawaii code {
-  background: rgba(40, 42, 68, 0.9);
-  color: #c4ceff;
-}
-
-[data-theme='dark'] .markdown-kawaii blockquote {
-  background: linear-gradient(90deg, rgba(40, 42, 68, 0.6), transparent);
-}
-
-/* 夜间表格：覆盖 github-markdown-css 默认白/黑斑马纹，改为微弱色差 */
-
-
-/* ═══ 完美的夜间表格高级感修正 ═══ */
-[data-theme='dark'] .markdown-kawaii.markdown-body table {
-  background-color: #232131 !important; /* 整体表格底色，比纯黑更有高级感 */
+.markdown-kawaii table {
   border-collapse: collapse;
+  width: 100%;
 }
 
-/* 1. 彻底解决表头太亮、字模糊的问题 */
+
+/* ══════════════════════════════════════════ */
+/* ☀️ 纯白天模式：文字加深！对比度拉满！绝不瞎眼！  */
+/* ══════════════════════════════════════════ */
+:root:not([data-theme='dark']) .markdown-kawaii.markdown-body {
+  background: rgba(255, 255, 255, 0.88);
+  color: #1a1a1a !important;       /* 👈 白天正文文字：强制改用接近纯黑色，清晰度满分！ */
+}
+
+:root:not([data-theme='dark']) .markdown-kawaii h1,
+:root:not([data-theme='dark']) .markdown-kawaii h2,
+:root:not([data-theme='dark']) .markdown-kawaii h3 {
+  color: #4a3e56 !important;       /* 👈 白天大标题：优雅沉稳的深紫黑色 */
+}
+
+:root:not([data-theme='dark']) .markdown-kawaii table th {
+  background: linear-gradient(135deg, #ffe8f0, #e8f0ff) !important; /* 舒适的粉蓝柔和渐变 */
+  color: #2b2533 !important;       /* 👈 白天表头文字：极其明显的深色，一眼看清 */
+}
+
+:root:not([data-theme='dark']) .markdown-kawaii table td {
+  color: #222222 !important;       /* 👈 白天表格内容：深黑灰色 */
+  border: 1px solid rgba(255, 143, 171, 0.2) !important;
+}
+
+:root:not([data-theme='dark']) .markdown-kawaii table tr {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+:root:not([data-theme='dark']) .markdown-kawaii table tr:nth-child(2n) {
+  background-color: rgba(255, 245, 249, 0.7) !important;
+}
+
+:root:not([data-theme='dark']) .markdown-kawaii code {
+  background: #fcecef !important;  /* 白天单行小代码底色 */
+  color: #d63384 !important;       /* 白天单行小代码文字：清晰的桃红色 */
+  padding: 0.15em 0.45em;
+  border-radius: 6px;
+}
+
+
+/* ══════════════════════════════════════════ */
+/* 🌙 纯黑夜模式：高级深夜紫灰底（只有切换时触发） */
+/* ══════════════════════════════════════════ */
+[data-theme='dark'] .markdown-kawaii.markdown-body {
+  background-color: #232131 !important;
+  color: #e2d4f7 !important;       /* 夜间正文文字：柔和亮紫 */
+}
+
+[data-theme='dark'] .markdown-kawaii table {
+  background-color: #232131 !important;
+}
+
+/* 🚨 替换这一小段：黑夜表头进化为高级暗夜渐变 🚨 */
 [data-theme='dark'] .markdown-kawaii.markdown-body table th {
-  background-color: #2d2a3e !important;  /* 固定的深色艺术背景，不搞半透明套娃！ */
-  color: #ff8fab !important;             /* 💡 让表头文字变成亮眼的少女粉/亮色，瞬间清晰！ */
-  font-weight: 700 !important;
-  border: 1px solid rgba(196, 181, 253, 0.15) !important;
+  /* 从神秘的深夜暗紫（#28243d）丝滑渐变到高冷的技术暗蓝紫（#1d213a） */
+  background: linear-gradient(135deg, #28243d 0%, #1d213a 100%) !important; 
+  color: #ffffff !important;             /* 纯白大字保持高清晰度 */
+  border: 1px solid rgba(196, 181, 253, 0.25) !important; /* 让边框微微发光 */
 }
 
-/* 2. 修正普通表格单元格的文字清晰度 */
-[data-theme='dark'] .markdown-kawaii.markdown-body table td {
-  background-color: transparent !important;
-  color: #e2d4f7 !important;             /* 💡 普通行文字改为清晰的亮浅紫色 */
+/* 黑夜表头里的小代码块高亮（比如那个 {{ }}） */
+[data-theme='dark'] .markdown-kawaii table th code {
+  background: rgba(255, 143, 171, 0.25) !important;
+  color: #ffb3c6 !important;
+  border: 1px solid rgba(255, 143, 171, 0.4) !important;
+}
+
+[data-theme='dark'] .markdown-kawaii table td {
+  color: #e2d4f7 !important;
   border: 1px solid rgba(140, 150, 200, 0.12) !important;
 }
 
-/* 3. 优雅的夜间交替斑马纹（一行深、一行浅） */
-[data-theme='dark'] .markdown-kawaii.markdown-body table tr {
-  background-color: rgba(255, 255, 255, 0.01) !important;
+[data-theme='dark'] .markdown-kawaii table tr {
+  background-color: #2a2738 !important;
 }
 
-[data-theme='dark'] .markdown-kawaii.markdown-body table tr:nth-child(2n) {
-  background-color: rgba(255, 255, 255, 0.03) !important; /* 极其微弱的错落感 */
+[data-theme='dark'] .markdown-kawaii table tr:nth-child(2n) {
+  background-color: #312e43 !important;
+}
+
+[data-theme='dark'] .markdown-kawaii code {
+  background: rgba(40, 42, 68, 0.9) !important;
+  color: #c4ceff !important;
 }
