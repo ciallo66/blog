@@ -1,6 +1,5 @@
 ### 5.15
-总结了vue2的路由
-总结了vue3的ref和reactive
+vue2的路由，ref和reactive
 
 ### 5.16
 deepseekd导入qq
@@ -22,3 +21,6 @@ vue3的组件通信和其他api
 
 ### 5.22
 其他api和一些语法糖
+
+### 5.23
+vue2全面升级vue3！！！
