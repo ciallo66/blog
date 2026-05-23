@@ -30,6 +30,7 @@ export default {
         { id: 7, title: 'MySql', summary: 'MySql数据库的学习', date: '2025-05-19' },
         { id: 8, title: 'Pinia', summary: 'Pinia的学习', date: '2025-05-19' },
         { id: 9, title: '一些语法糖', summary: '一些语法糖', date: '2025-05-22' },
+        { id: 10, title: 'sql语法基础', summary: 'sql', date: '2025-05-23' },
       ]
     }
   },
