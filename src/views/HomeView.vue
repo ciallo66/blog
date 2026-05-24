@@ -25,7 +25,7 @@
 const chips = ['Vue3', 'TypeScript', 'Markdown', '全栈修行中']
 </script>
 
-<style scoped>
+<style >
 .home {
   padding-top: 2.5rem;
 }

@@ -36,6 +36,7 @@
 
   --transition-bounce: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   --transition-smooth: 0.3s ease;
+  --test-ziti:'Permanent Marker', cursive;
 }
 
 /* ═══ 夜间星空主题 ═══ */
@@ -77,6 +78,7 @@
 html {
   scroll-behavior: smooth;
   color-scheme: light;
+  scrollbar-gutter: stable; 
 }
 
 html[data-theme='dark'] {
@@ -111,7 +113,7 @@ a:hover {
   width: min(920px, 92vw);
   margin: 0 auto;
   padding: 2rem 0 3rem;
-  animation: fadeSlideUp 0.55s ease both;
+
 }
 
 .page-title {
@@ -232,7 +234,7 @@ a:hover {
     transform: scale(1.15);
   }
 }
-
+/*  ══════ 星星全局关键帧══════   */
 @keyframes skyTwinkle {
   0%,
   100% {
@@ -403,3 +405,5 @@ a:hover {
     transition-duration: 0.01ms !important;
   }
 }
+
+

@@ -40,12 +40,8 @@ onMounted(() => {
 .starfield {
   display: none;
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-:global([data-theme='dark']) .starfield {
-  display: block;
+  inset: 0;               /* 撑满整个父容器 */
+  pointer-events: none;    /* 不阻挡鼠标事件，不影响点击 */
 }
 
 .starfield__dot {
@@ -54,5 +50,11 @@ onMounted(() => {
   background: rgba(220, 228, 255, 0.9);
   box-shadow: 0 0 3px rgba(180, 195, 255, 0.35);
   animation: skyTwinkle ease-in-out infinite;
+}
+</style>
+
+<style>
+[data-theme='dark'] .starfield {
+  display: block;
 }
 </style>

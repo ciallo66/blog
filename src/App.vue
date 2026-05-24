@@ -1,4 +1,5 @@
 <template>
+
   <div id="app" class="app-shell">
     <div class="bg-deco" aria-hidden="true">
       <div class="bg-deco__blob bg-deco__blob--1"></div>
@@ -22,6 +23,7 @@
 
     <CursorTrail />
     <AppHeader />
+
     <main class="app-main">
       <router-view v-slot="{ Component }">
         <transition name="page" mode="out-in">
@@ -29,6 +31,7 @@
         </transition>
       </router-view>
     </main>
+
     <AppFooter />
     <WaifuMascot />
   </div>
@@ -40,6 +43,8 @@ import AppFooter from '@/components/layout/AppFooter.vue'
 import WaifuMascot from '@/components/layout/WaifuMascot.vue'
 import CursorTrail from '@/components/effects/CursorTrail.vue'
 import Starfield from '@/components/effects/Starfield.vue'
+
+
 </script>
 
 <style scoped>
@@ -56,7 +61,9 @@ import Starfield from '@/components/effects/Starfield.vue'
   position: relative;
   z-index: 1;
 }
+</style>
 
+<style>
 .page-enter-active,
 .page-leave-active {
   transition:
@@ -71,6 +78,6 @@ import Starfield from '@/components/effects/Starfield.vue'
 
 .page-leave-to {
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translateY(-80px);
 }
 </style>
