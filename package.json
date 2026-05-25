@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "dompurify": "^3.4.5",
     "github-markdown-css": "^5.9.0",
     "marked": "^18.0.3",
     "pinia": "^3.0.1",

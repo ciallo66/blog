@@ -8,15 +8,18 @@
         记录 Vue、算法与全栈学习点滴的温柔小角落<br />
         粉蓝配色 · 软萌交互 · 像番剧片头一样治愈 ✨
       </p>
+
       <div class="hero-actions">
         <router-link to="/blog" class="btn-kawaii">
           <span>📖</span> 打开日记本
         </router-link>
         <router-link to="/about" class="btn-ghost">认识作者 →</router-link>
       </div>
+
       <div class="hero-chips">
         <span v-for="chip in chips" :key="chip" class="chip">{{ chip }}</span>
       </div>
+      
     </div>
   </section>
 </template>
@@ -25,7 +28,7 @@
 const chips = ['Vue3', 'TypeScript', 'Markdown', '全栈修行中']
 </script>
 
-<style >
+<style scoped>
 .home {
   padding-top: 2.5rem;
 }
