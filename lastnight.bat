@@ -1,4 +1,3 @@
 @echo off
-for /f "tokens=1-3 delims=/- " %%a in ('powershell -Command "(Get-Date).AddHours(-4).ToString('yyyy-MM-ddTHH:mm:ss+0800')"') do set newdate=%%a-%%bT%%c
-git commit --amend --date="%newdate%" --no-edit
+powershell -Command "$d = (Get-Date).AddHours(-4).ToString('yyyy-MM-ddTHH:mm:ss+0800'); & git commit --amend --date=\"$d\" --no-edit"
 echo 已改为当前时间减4小时
