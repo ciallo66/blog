@@ -19,6 +19,7 @@ export const blogPosts = [
   { id: '011', file: '11.libraries', title: '好用的第三方库', summary: '好用的第三方库推荐', date: '2025-05-24' },
   { id: '012', file: '12.Es6', title: 'es6牛逼语法', summary: '记录es6语法', date: '2025-05-24' },
   { id: '013', file: '13.knowladge', title: '杂七杂八的知识点', summary: '不知道从哪搞得杂七杂八的知识点，感觉很重要，记录下来', date: '2025-05-25' },
+  { id: '014', file: '14.Node.js', title: 'Node.js学习', summary: 'node.js学的总结', date: '2025-05-25' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
