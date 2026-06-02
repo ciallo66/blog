@@ -6,12 +6,19 @@ import DOMPurify from 'dompurify'
  * 从 public/blog 加载 Markdown 并渲染为 HTML
  */
 export function useMarkdown() {
+
   const markdownSource = ref('')
 
-const renderedHtml = computed(() => {
+  
+
+  const renderedHtml = computed(() => {
     if (!markdownSource.value) return ''
-    const rawHtml = marked.parse(markdownSource.value) as string       //as string是ts里的类型断言,告诉ts我返回的是一个字符串，不是promise
-    return DOMPurify.sanitize(rawHtml)  // 过滤掉危险 HTML,防止xss
+    //as string是ts里的类型断言,告诉ts我返回的是一个字符串，不是promise
+    const rawHtml = marked.parse(markdownSource.value) as string   
+     // 过滤掉危险 HTML,防止xss    
+    return DOMPurify.sanitize(rawHtml) 
+
+
   })
 
 //异步函数，读取md文件
