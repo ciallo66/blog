@@ -21,6 +21,7 @@ export const blogPosts = [
   { id: '013', file: '13.knowladge', title: '杂七杂八的知识点', summary: '不知道从哪搞得杂七杂八的知识点，感觉很重要，记录下来', date: '2025-05-25' },
   { id: '014', file: '14.Node.js', title: 'Node.js学习', summary: 'node.js学的总结', date: '2025-05-25' },
   { id: '015', file: '15.express', title: 'express从入门到精通', summary: 'express学习笔记', date: '2025-05-31' },
+  { id: '016', file: '16.MongoDB', title: 'MongoDB学习', summary: 'MongoDB学习', date: '2025-6-2' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
