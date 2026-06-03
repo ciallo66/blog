@@ -21,7 +21,8 @@ export const blogPosts = [
   { id: '013', file: '13.knowladge', title: '杂七杂八的知识点', summary: '不知道从哪搞得杂七杂八的知识点，感觉很重要，记录下来', date: '2025-05-25' },
   { id: '014', file: '14.Node.js', title: 'Node.js学习', summary: 'node.js学的总结', date: '2025-05-25' },
   { id: '015', file: '15.express', title: 'express从入门到精通', summary: 'express学习笔记', date: '2025-05-31' },
-  { id: '016', file: '16.MongoDB', title: 'MongoDB学习', summary: 'MongoDB学习', date: '2025-6-2' },
+  { id: '016', file: '16.ALL', title: '前后端链接的问题', summary: '在前后端连接的过程中遇到的问题', date: '2025-6-2' },
+  { id: '017', file: '17.Ajax', title: 'Ajax接受数据', summary: '不刷新整个页面，通过 JavaScript 向服务器发送/接收数据', date: '2025-6-3' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
