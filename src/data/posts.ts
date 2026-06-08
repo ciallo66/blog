@@ -1,3 +1,5 @@
+import type { V } from "vue-router/dist/router-CWoNjPRp.mjs"
+
 /**
  * 博客文章元数据
  *
