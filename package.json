@@ -15,7 +15,9 @@
   "dependencies": {
     "dompurify": "^3.4.5",
     "github-markdown-css": "^5.9.0",
+    "highlight.js": "^11.11.1",
     "marked": "^18.0.3",
+    "marked-highlight": "^2.2.4",
     "pinia": "^3.0.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"

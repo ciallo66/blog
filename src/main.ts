@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from './router'
 import { useThemeStore } from '@/stores/theme'
 import '@/assets/styles/global.css'
+import 'highlight.js/styles/atom-one-dark.css'
 
 const pinia = createPinia()
 const app = createApp(App)

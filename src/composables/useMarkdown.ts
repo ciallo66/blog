@@ -1,6 +1,19 @@
 import { ref, computed } from 'vue'
 import { marked } from 'marked'
+import { markedHighlight } from 'marked-highlight'
+import hljs from 'highlight.js'
 import DOMPurify from 'dompurify'
+
+// 配置 marked 使用 highlight.js 做代码高亮
+marked.use(
+  markedHighlight({
+    langPrefix: 'hljs language-',
+    highlight(code, lang) {
+      const language = lang && hljs.getLanguage(lang) ? lang : 'plaintext'
+      return hljs.highlight(code, { language }).value
+    },
+  }),
+)
 
 /**
  * 从 public/blog 加载 Markdown 并渲染为 HTML
