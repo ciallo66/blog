@@ -26,6 +26,7 @@ export const blogPosts = [
   { id: '016', file: '16.issue', title: '前后端链接的问题', summary: '在前后端连接的过程中遇到的问题', date: '2025-6-2' },
   { id: '017', file: '17.Ajax', title: 'Ajax接受数据', summary: '不刷新整个页面，通过 JavaScript 向服务器发送/接收数据', date: '2025-6-3' },
   { id: '018', file: '18.FistProject', title: '面试题知识库项目知识点总结', summary: '第一个项目，里面总结了开发过程中知识点的学习和易错点', date: '2025-6-5' },
+  { id: '019', file: '19.Regex', title: '正则表达式(Regex)', summary: '正则表达式的学习，它是一个高级文本查找与替换的硬核工具', date: '2025-6-24' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
