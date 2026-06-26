@@ -117,3 +117,15 @@ zod库的使用
 
 ### 6.22
 看代码，复习linux
+
+### 6.23
+找实习，期末考试
+
+### 6.24
+找实习，正则表达式
+
+### 6.25
+找实习，mysql数据库（DDL,DML,DQL,DCL，函数）
+
+### 6.26mysqldump
+NVM，PM2，Nginx， HTTPS，mysqldumpSSH Tunnel线上阿里云服务器部署
