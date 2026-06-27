@@ -27,6 +27,7 @@ export const blogPosts = [
   { id: '017', file: '17.Ajax', title: 'Ajax接受数据', summary: '不刷新整个页面，通过 JavaScript 向服务器发送/接收数据', date: '2025-6-3' },
   { id: '018', file: '18.FistProject', title: '面试题知识库项目知识点总结', summary: '第一个项目，里面总结了开发过程中知识点的学习和易错点', date: '2025-6-5' },
   { id: '019', file: '19.Regex', title: '正则表达式(Regex)', summary: '正则表达式的学习，它是一个高级文本查找与替换的硬核工具', date: '2025-6-24' },
+  { id: '020', file: '20.github', title: 'github自动部署服务器', summary: '学习使用如何将github中的代码自动推送到对应的服务器并自动部署', date: '2025-6-27' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
