@@ -129,3 +129,9 @@ zod库的使用
 
 ### 6.26mysqldump
 NVM，PM2，Nginx， HTTPS，mysqldumpSSH Tunnel线上阿里云服务器部署
+
+### 6.27
+github CI/CD自动部署服务器
+
+### 6.28
+uniapp初步学习（vue3差异，生命周期，导出）
