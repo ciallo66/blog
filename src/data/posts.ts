@@ -10,7 +10,7 @@ import type { V } from "vue-router/dist/router-CWoNjPRp.mjs"
 export const blogPosts = [
   { id: '001', file: '1.vue2', title: 'Vue2的学习', summary: 'Vue2基础知识总结', date: '2025-05-12' },
   { id: '002', file: '2.Markdown', title: 'md的学习', summary: 'md知识点总结', date: '2025-05-14' },
-  { id: '003', file: '3.Vu3', title: 'Vue3的学习', summary: 'vue3的新内容', date: '2025-05-16' },
+  { id: '003', file: '3.Vue3', title: 'Vue3的学习', summary: 'vue3的新内容', date: '2025-05-16' },
   { id: '004', file: '4.algorithms', title: '每天两个算法题', summary: '算法学习', date: '2025-05-16' },
   { id: '005', file: '5.promise', title: '异步学习', summary: 'promise和async/await语法糖', date: '2025-05-17' },
   { id: '006', file: '6.ts', title: 'ts学习', summary: '记录ts的部分语法', date: '2025-05-18' },
