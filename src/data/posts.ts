@@ -28,7 +28,7 @@ export const blogPosts = [
   { id: '018', file: '18.FistProject', title: '面试题知识库项目知识点总结', summary: '第一个项目，里面总结了开发过程中知识点的学习和易错点', date: '2025-6-5' },
   { id: '019', file: '19.Regex', title: '正则表达式(Regex)', summary: '正则表达式的学习，它是一个高级文本查找与替换的硬核工具', date: '2025-6-24' },
   { id: '020', file: '20.github', title: 'github自动部署服务器', summary: '学习使用如何将github中的代码自动推送到对应的服务器并自动部署', date: '2025-6-27' },
-  { id: '020', file: '21.uniapp', title: 'uni-app学习', summary: '学习如何使用uniapp以及和vue3原生写法的区别', date: '2025-6-28' },
+  { id: '021', file: '21.uniapp', title: 'uni-app学习', summary: '学习如何使用uniapp以及和vue3原生写法的区别', date: '2025-6-28' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
