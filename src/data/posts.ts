@@ -30,6 +30,7 @@ export const blogPosts = [
   { id: '021', file: '21.uniapp', title: 'uni-app学习', summary: '学习如何使用uniapp以及和vue3原生写法的区别', date: '2025-6-28' },
   { id: '022', file: '22.python', title: 'python学习', summary: 'python入门到精通', date: '2025-7-15' },
   { id: '023', file: '23.fastapi', title: 'fastapi学习', summary: 'fastapi入门到精通', date: '2025-7-22' },
+  { id: '024', file: '24.version', title: '软件版本号的规范', summary: '记录开发过程总版本号命名的问题', date: '2025-7-23' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
