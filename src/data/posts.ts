@@ -38,6 +38,7 @@ export const blogPosts = [
   { id: '029', file: '29.Instance', title: '关于云服务器（实例）的使用', summary: '主要介绍以Ubuntu为主的服务器相关知识点', date: '2026-08-17' },
   { id: '030', file: '30.Agent', title: 'Agent开发相关的概念', summary: '介绍一下ai智能体开发的流程和相关知识点', date: '2026-08-31' },
   { id: '031', file: '31.security', title: '网络安全', summary: '开发或者网络等安全知识点的简要介绍', date: '2026-09-04' },
+  { id: '032', file: '32.paradigm', title: '编程范式与核心思想', summary: 'OOP/FP/AOP/DI 等编程范式的核心思想、载体与工程场景', date: '2026-09-18' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
