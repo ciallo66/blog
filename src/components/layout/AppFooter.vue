@@ -3,7 +3,7 @@
     <div class="footer-inner">
       <p class="footer-text">
         <span class="heart">♡</span>
-        {{ year }} 萌系代码小屋 · 用代码记录每一天
+        {{ year }} 代码日记屋 · 用代码记录学习日常
         <span class="heart">♡</span>
       </p>
       <p class="footer-motto">✨ 今日も頑張ろう ✨</p>

@@ -1,7 +1,7 @@
 <template>
   <section class="about page-wrap">
     <h2 class="page-title">💫 关于作者</h2>
-    <p class="page-subtitle">一只在代码世界里修行的萌系学徒</p>
+    <p class="page-subtitle">一个正在打怪升级的全栈学习者</p>
 
     <div class="profile kawaii-card">
       <div class="avatar" aria-hidden="true">
@@ -11,9 +11,11 @@
 
       <h3 class="profile-name">代码爱好者</h3>
       <p class="profile-bio">
-        我是一个代码爱好者，致力于创建一个完整的前后端网站，也就是全栈。
-        把这个博客打扮成粉粉嫩嫩的样子，是为了让学习也变得开心一点～
+        平时主要折腾 Vue 和全栈开发，也会把这些学习过程记下来。
+        努力成长，早日变成代码糕手！
       </p>
+
+      <a class="link" href="https://github.com/ciallo66">GitHub 主页 →</a>
 
       <ul class="skill-list">
         <li v-for="skill in skills" :key="skill" class="skill-item">
@@ -29,7 +31,7 @@
 </template>
 
 <script setup>
-const skills = ['Vue 3', 'TypeScript', 'Pinia', 'Node', 'MySQL', '算法打卡']
+const skills = ['Vue 3', 'TypeScript', 'fastapi', 'express', 'MySQL','RAG']
 </script>
 
 <style scoped>
@@ -86,7 +88,7 @@ const skills = ['Vue 3', 'TypeScript', 'Pinia', 'Node', 'MySQL', '算法打卡']
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .skill-item {
@@ -106,5 +108,9 @@ const skills = ['Vue 3', 'TypeScript', 'Pinia', 'Node', 'MySQL', '算法打卡']
 
 .profile-cta {
   margin-top: 0.5rem;
+}
+
+.link{
+  font-size: 16px;
 }
 </style>

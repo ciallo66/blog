@@ -3,7 +3,7 @@
     <div class="header-inner">
       <router-link to="/" class="logo">
         <span class="logo-icon">🌸</span>
-        <span class="logo-text">萌系代码小屋</span>
+        <span class="logo-text">代码日记屋</span>
       </router-link>
 
       <nav class="nav">

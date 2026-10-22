@@ -3,10 +3,10 @@
     <div class="hero kawaii-card">
       <div class="hero-mascot" aria-hidden="true">(◕‿◕✿)</div>
       <p class="hero-tag">Welcome · ようこそ</p>
-      <h1 class="hero-title">萌系代码小屋</h1>
+      <h1 class="hero-title">代码日记屋</h1>
       <p class="hero-desc">
-        记录 Vue、算法与全栈学习点滴的温柔小角落<br />
-        粉蓝配色 · 软萌交互 · 像番剧片头一样治愈 ✨
+        记录 Vue、算法与全栈的学习笔记<br />
+        顺手加点装饰，让写代码这件事没那么枯燥 ✨
       </p>
 
       <div class="hero-actions">
