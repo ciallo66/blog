@@ -41,6 +41,7 @@ export const blogPosts = [
   { id: '032', file: '32.paradigm', title: '编程范式与核心思想', summary: 'OOP/FP/AOP/DI 等编程范式的核心思想、载体与工程场景', date: '2026-09-18' },
   { id: '033', file: '33.C#', title: 'C#的学习与心得', summary: '整理总计C#和unity开发过程中的一些知识点', date: '2026-09-28' },
   { id: '034', file: '34.Java', title: 'Java学习与心得', summary: 'Java知识点汇总', date: '2026-10-16' },
+  { id: '035', file: '35.langchain', title: 'langchain入门到精通', summary: 'langchain', date: '2026-10-23' },
 ]
 
 /** 根据路由参数 id（如 '001'）查找文章 */
